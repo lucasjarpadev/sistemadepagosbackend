@@ -13,8 +13,12 @@ class CreateTableSubscription extends Migration
      */
     public function up()
     {
-        Schema::create('table_subscription', function (Blueprint $table) {
+        Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('userid')->unsigned()->nullable();
+            $table->bigInteger('servicecontractid')->unsigned()->nullable(); 
+            $table->foreign('userid')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('servicecontractid')->references('id')->on('servicecontracts')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });
     }

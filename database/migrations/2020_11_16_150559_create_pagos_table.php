@@ -16,10 +16,10 @@ class CreatePagosTable extends Migration
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
             $table->integer("totalprice");
-            
-
-
-
+            $table->bigInteger('userid')->unsigned()->nullable();
+            $table->bigInteger('groupid')->unsigned()->nullable();
+            $table->foreign('userid')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('groupid')->references('id')->on('teams')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });
     }

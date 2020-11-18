@@ -9,6 +9,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Pago as Pagos;
 
 class User extends Authenticatable
 {
@@ -57,4 +58,24 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    public function Pagos(){
+        return $this->hasMany(Pagos::class,'userid');
+    }
+
+
+    public function Subscriptions(){
+        return $this->hasMany(Subscription::class,'userid');
+    }
+
+
+    
+    // public function Tags(){
+    //     return $this->hasMany(Work_tag::class,'workid');
+    // }
+
+
+
+
 }

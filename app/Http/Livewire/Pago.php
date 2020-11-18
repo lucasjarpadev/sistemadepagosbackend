@@ -14,9 +14,15 @@ class Pago extends Component
 
     public function render()
     {
+        // show all payments 
 
         $this->pagos = $Pagos::all();
 
         return view('livewire.pago');
     }
+
+
+
+
+    
 }

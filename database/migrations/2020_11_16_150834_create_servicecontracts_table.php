@@ -15,6 +15,7 @@ class CreateServicecontractsTable extends Migration
     {
         Schema::create('servicecontracts', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
             $table->timestamps();
         });
     }

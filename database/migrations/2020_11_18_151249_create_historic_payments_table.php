@@ -15,6 +15,8 @@ class CreateHistoricPaymentsTable extends Migration
     {
         Schema::create('historic_payments', function (Blueprint $table) {
             $table->id();
+            
+
             $table->timestamps();
         });
     }
