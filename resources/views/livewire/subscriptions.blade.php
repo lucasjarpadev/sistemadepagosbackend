@@ -10,7 +10,7 @@
               <span class="text-gray-300"></span>
             </th>
             <th class="px-16 py-2">
-              <span class="text-gray-300">Name</span>
+              <span class="text-gray-300">Name Service</span>
             </th>
             <th class="px-16 py-2">
               <span class="text-gray-300">Actions</span>

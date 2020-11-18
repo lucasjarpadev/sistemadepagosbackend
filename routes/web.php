@@ -26,4 +26,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('subscriptions', function (
 })->name('subscriptions');
 
 
+Route::middleware(['auth:sanctum', 'verified'])->get('pago', function () {
+    return view('payment');
+})->name('pago');
+
+
 
