@@ -40,9 +40,15 @@ Ejecutar
 
 composer install
 
-php artisan migrate (Se genera automaticamente en la base de datos la estructura de la misma)
+php artisan migrate 
+
+(Se genera automaticamente en la base de datos la estructura de la misma)
 
 
+
+php artisan db:seed 
+
+(se genera automaticamente servicios de ejemplos para suscribirse)
 
 
 

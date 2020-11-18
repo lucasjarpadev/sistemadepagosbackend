@@ -69,6 +69,10 @@ class User extends Authenticatable
         return $this->hasMany(Subscription::class,'userid');
     }
 
+    public function Gpsdata(){
+        return $this->hasMany(Gpsusers::class,'userid');
+    }
+
 
     
     // public function Tags(){
